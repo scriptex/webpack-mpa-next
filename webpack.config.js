@@ -25,7 +25,8 @@ const postcssConfig = {
 		require('postcss-cssnext'),
 		require('postcss-nested'),
 		require('postcss-mixins'),
-		require('postcss-utilities')
+		require('postcss-utilities'),
+		require('postcss-flexbugs-fixes')
 	],
 	...sourceMap
 };

@@ -49,13 +49,17 @@ npm run build
 
 ## Details
 
-1. [SASS](http://sass-lang.com/) stylesheets preprocessing
-   * The SASS file/folder structure utilizes the ITCSS pattern as shown and expained [here](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
-2. [PostCSS](https://github.com/postcss/postcss) stylesheet postprocessing including:
+1. [PostCSS](http://postcss.org/) stylesheets preprocessing
+   * The CSS file/folder structure utilizes the ITCSS pattern as shown and expained [here](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+2. [PostCSS](http://postcss.org/) stylesheet postprocessing including:
    * [easy importing](https://github.com/TrySound/postcss-easy-import) of non-sass files
    * [url rebase](https://github.com/postcss/postcss-url) - locates and copies assets from `node_modules`
+   * [postcss cssnext](http://cssnext.io/) - use tomorrow's CSS syntax, today
+   * [postcss nexted](https://github.com/postcss/postcss-nested) - use SASS like nesting in CSS
+   * [postcss mixins](https://github.com/postcss/postcss-mixins) - PostCSS plugin for mixins
    * [postcss-utilities](https://github.com/ismamz/postcss-utilities) usage
    * [flexbox bugs](https://github.com/luisrudge/postcss-flexbugs-fixes) fixing
+   * [rules merging](https://github.com/ben-eb/postcss-merge-rules)
    * [css minification](http://cssnano.co/)
 3. PNG Sprite generating using [Webpack SpriteSmith](https://github.com/mixtur/webpack-spritesmith)
    The default setup includes retina sprite support which means that you should provide a retina version of each png icon.
@@ -90,4 +94,4 @@ The `assets` folder contains several folders:
   * `svg` - holds svg sprite's parts
   * `temp` - holds content images
 * `scripts` - contains the JS modules
-* `styles` - contains the SASS stylesheets
+* `styles` - contains the CSS stylesheets
