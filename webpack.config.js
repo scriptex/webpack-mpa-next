@@ -1,7 +1,6 @@
 const url = require('url');
 const path = require('path');
 
-const magicImporter = require('node-sass-magic-importer');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -23,9 +22,10 @@ const postcssConfig = {
 		require('postcss-url')({
 			url: 'rebase'
 		}),
-		require('postcss-utilities'),
-		require('postcss-flexbugs-fixes'),
-		require('autoprefixer')()
+		require('postcss-cssnext'),
+		require('postcss-nested'),
+		require('postcss-mixins'),
+		require('postcss-utilities')
 	],
 	...sourceMap
 };
@@ -81,7 +81,7 @@ const spritesmithConfig = {
 	},
 	target: {
 		image: path.resolve(__dirname, './assets/dist/sprite.png'),
-		css: path.resolve(__dirname, './assets/styles/_sprite.scss')
+		css: path.resolve(__dirname, './assets/styles/_sprite.css')
 	},
 	apiOptions: {
 		cssImageRef: '../dist/sprite.png'
@@ -145,7 +145,7 @@ module.exports = env => {
 	}
 
 	const config = {
-		entry: ['./assets/styles/main.scss', './assets/scripts/main.js'],
+		entry: ['./assets/styles/main.css', './assets/scripts/main.js'],
 		output: {
 			filename: './assets/dist/app.js'
 		},
@@ -159,7 +159,7 @@ module.exports = env => {
 		module: {
 			rules: [
 				{
-					test: /\.scss$/,
+					test: /\.css$/,
 					use: ExtractTextPlugin.extract({
 						use: [
 							{
@@ -169,13 +169,6 @@ module.exports = env => {
 							{
 								loader: 'postcss-loader',
 								options: postcssConfig
-							},
-							{
-								loader: 'sass-loader',
-								options: {
-									importer: magicImporter(),
-									...sourceMap
-								}
 							}
 						],
 						fallback: 'style-loader'

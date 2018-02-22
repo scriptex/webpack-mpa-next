@@ -1,5 +1,3 @@
-// Transitions
-
 a,
 a img,
 input,
@@ -10,6 +8,6 @@ textarea,
 [class^='svg-'] {
 	transition-property: color, opacity, border-color, background-color,
 		box-shadow, fill, stroke;
-	transition-duration: $timing;
-	transition-timing-function: $easing;
+	transition-duration: var(--timing);
+	transition-timing-function: var(--easing);
 }
