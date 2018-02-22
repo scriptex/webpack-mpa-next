@@ -21,7 +21,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"normalize.css": "^7.0.0"
+		"normalize.css": "^8.0.0"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
@@ -29,7 +29,7 @@
 		"babel-preset-env": "^1.6.1",
 		"babel-preset-stage-2": "^6.24.1",
 		"browser-sync": "^2.23.5",
-		"browser-sync-webpack-plugin": "^1.2.0",
+		"browser-sync-webpack-plugin": "^2.0.1",
 		"clean-webpack-plugin": "^0.1.17",
 		"css-loader": "^0.28.8",
 		"cssnano": "^3.10.0",
@@ -37,7 +37,7 @@
 		"file-loader": "^1.1.6",
 		"imagemin-mozjpeg": "^7.0.0",
 		"imagemin-pngquant": "^5.0.1",
-		"imagemin-webpack-plugin": "^1.6.1",
+		"imagemin-webpack-plugin": "^2.0.0",
 		"postcss-cssnext": "^3.1.0",
 		"postcss-easy-import": "^3.0.0",
 		"postcss-flexbugs-fixes": "^3.2.0",
@@ -46,9 +46,9 @@
 		"postcss-mixins": "^6.2.0",
 		"postcss-nested": "^3.0.0",
 		"postcss-url": "^7.3.0",
-		"postcss-utilities": "^0.7.0",
+		"postcss-utilities": "^0.8.0",
 		"spritesh": "^1.2.0",
-		"style-loader": "^0.19.1",
+		"style-loader": "^0.20.2",
 		"uglifyjs-webpack-plugin": "^1.1.6",
 		"webpack": "^3.10.0",
 		"webpack-spritesmith": "^0.4.0"
