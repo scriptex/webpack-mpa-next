@@ -71,7 +71,7 @@ const browserSyncConfig = {
 };
 
 const extractTextConfig = {
-	filename: 'assets/dist/app.css',
+	filename: 'dist/app.css',
 	allChunks: true
 };
 
@@ -146,9 +146,11 @@ module.exports = env => {
 	}
 
 	const config = {
+		mode: env.NODE_ENV,
 		entry: ['./assets/styles/main.css', './assets/scripts/main.js'],
 		output: {
-			filename: './assets/dist/app.js'
+			path: path.resolve(__dirname, './assets'),
+			filename: 'dist/app.js'
 		},
 		resolve: {
 			modules: [
@@ -208,8 +210,8 @@ module.exports = env => {
 		],
 		cache: true,
 		bail: false,
-		devtool: 'source-map',
-		stats: 'errors-only'
+		devtool: 'source-map'
+		// stats: 'errors-only'
 	};
 
 	if (isDevelopment) {
