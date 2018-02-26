@@ -190,8 +190,8 @@ module.exports = env => {
 							options: {
 								name: '[hash].[ext]',
 								context: '',
-								publicPath: '../../',
-								outputPath: 'assets/dist/'
+								publicPath: './',
+								outputPath: './dist'
 							}
 						}
 					]
@@ -210,8 +210,8 @@ module.exports = env => {
 		],
 		cache: true,
 		bail: false,
-		devtool: 'source-map'
-		// stats: 'errors-only'
+		devtool: 'source-map',
+		stats: 'errors-only'
 	};
 
 	if (isDevelopment) {
