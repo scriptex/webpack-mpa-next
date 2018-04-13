@@ -67,8 +67,7 @@ npm run build
 4. Automatic browser reload using [BrowserSync](https://browsersync.io/)
 5. Images optimization using [Imagemin](https://github.com/Klathmon/imagemin-webpack-plugin)
 6. SVG Sprite generating using [spritesh](https://www.npmjs.com/package/spritesh)
-   The command which generates SVG sprite is `yarn svg` or `npm run svg`.
-   The command takes the svg files from `assets/images/svg` and produces a single `sprite.svg` file in `dist` directory.
+   All svg files located in `assets/images/svg` and merged into a single `sprite.svg` file in `dist` directory.
 7. All front-end assets are stored in an auto-generated `dist` folder.
 
 **If you wish to use a proxy in browsersync you can do it using the `url` CLI argument like this:**
