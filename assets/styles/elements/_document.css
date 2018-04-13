@@ -8,6 +8,6 @@ body {
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-black);
-	min-width: 320px;
+	min-width: 20rem;
 	background-color: var(--color-white);
 }

@@ -85,5 +85,5 @@ textarea::placeholder {
 
 input:-webkit-autofill {
 	-webkit-text-fill-color: inherit;
-	-webkit-box-shadow: 0 0 0 1000px var(--color-white) inset;
+	-webkit-box-shadow: 0 0 0 62.5rem var(--color-white) inset;
 }
