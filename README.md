@@ -49,10 +49,9 @@ npm run build
 
 ## Details
 
-1. [PostCSS](http://postcss.org/) stylesheets preprocessing
+1. [PostCSS](http://postcss.org/) stylesheets pre- and postprocessing
    * The CSS file/folder structure utilizes the ITCSS pattern as shown and expained [here](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
-2. [PostCSS](http://postcss.org/) stylesheet postprocessing including:
-   * [easy importing](https://github.com/TrySound/postcss-easy-import) of non-sass files
+   * [easy importing](https://github.com/TrySound/postcss-easy-import) of css files
    * [url rebase](https://github.com/postcss/postcss-url) - locates and copies assets from `node_modules`
    * [postcss cssnext](http://cssnext.io/) - use tomorrow's CSS syntax, today
    * [postcss nexted](https://github.com/postcss/postcss-nested) - use SASS like nesting in CSS
@@ -61,16 +60,16 @@ npm run build
    * [flexbox bugs](https://github.com/luisrudge/postcss-flexbugs-fixes) fixing
    * [rules merging](https://github.com/ben-eb/postcss-merge-rules)
    * [css minification](http://cssnano.co/)
-3. PNG Sprite generating using [Webpack SpriteSmith](https://github.com/mixtur/webpack-spritesmith)
+2. PNG Sprite generating using [Webpack SpriteSmith](https://github.com/mixtur/webpack-spritesmith)
    The default setup includes retina sprite support which means that you should provide a retina version of each png icon.
    If you do not wish to use the retina sprite, comment the `@include retina-sprites($retina-groups);` statement in `main.scss` file.
-4. Latest EcmaScript support
-5. Automatic browser reload using [BrowserSync](https://browsersync.io/)
-6. Images optimization using [Imagemin](https://github.com/Klathmon/imagemin-webpack-plugin)
-7. SVG Sprite generating using [spritesh](https://www.npmjs.com/package/spritesh)
+3. Latest EcmaScript support
+4. Automatic browser reload using [BrowserSync](https://browsersync.io/)
+5. Images optimization using [Imagemin](https://github.com/Klathmon/imagemin-webpack-plugin)
+6. SVG Sprite generating using [spritesh](https://www.npmjs.com/package/spritesh)
    The command which generates SVG sprite is `yarn svg` or `npm run svg`.
    The command takes the svg files from `assets/images/svg` and produces a single `sprite.svg` file in `dist` directory.
-8. All front-end assets are stored in an auto-generated `dist` folder.
+7. All front-end assets are stored in an auto-generated `dist` folder.
 
 **If you wish to use a proxy in browsersync you can do it using the `url` CLI argument like this:**
 
@@ -95,3 +94,10 @@ The `assets` folder contains several folders:
   * `temp` - holds content images
 * `scripts` - contains the JS modules
 * `styles` - contains the CSS stylesheets
+
+## Known Issues
+
+1. Newly created SCSS files do not trigger the build process.
+
+   A workaround for this issue is to save an old file after the newly created file has been added.
+   More on this can be found [here](https://github.com/sass/node-sass/issues/1891)
