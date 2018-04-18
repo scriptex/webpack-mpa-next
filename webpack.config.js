@@ -2,6 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 const glob = require('glob');
+const chokidar = require('chokidar');
 
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { ProvidePlugin } = require('webpack');
@@ -158,6 +159,16 @@ if (svgs.length) {
 		'spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-'
 	);
 }
+
+chokidar.watch('./assets/styles/').on('add', () => {
+	const main = './assets/styles/main.css';
+
+	fs.appendFile(main, '/*CHANGE*/', () => {
+		fs.readFile(main, 'utf8', (err, data) => {
+			fs.writeFileSync(main, data.replace(/\n?\/\*CHANGE\*\//gm, ''));
+		});
+	});
+});
 
 module.exports = env => {
 	const isDevelopment = env.NODE_ENV === 'development';
