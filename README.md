@@ -22,7 +22,7 @@ Just keep in mind that the styles should be located in `assets/styles` and the s
 
 ## Download
 
-You can download this setup [directly](https://github.com/scriptex/webpack-mpa/archive/master.zip) and extract it.
+You can download this setup [directly](https://github.com/scriptex/webpack-mpa/archive/postcss.zip) and extract it.
 
 or use NPM or Yarn to install it:
 
