@@ -4,17 +4,12 @@ const path = require('path');
 const glob = require('glob');
 const chokidar = require('chokidar');
 
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const { ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
-
-const imageminMozjpeg = require('imagemin-mozjpeg');
-const imageminPNGquant = require('imagemin-pngquant');
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 
 const sourceMap = {
 	sourceMap: true
@@ -120,32 +115,6 @@ const cleanConfig = {
 	exclude: ['sprite.svg']
 };
 
-const imageminConfig = {
-	test: 'assets/**/*.{jpg,png,gif}',
-	externalImages: {
-		context: '.',
-		sources: [
-			...glob.sync('assets/images/temp/*.jpg'),
-			...glob.sync('assets/images/temp/*.png'),
-			...glob.sync('assets/images/temp/*.gif')
-		],
-		destination: '.'
-	},
-	gifsicle: {
-		interlaced: true
-	},
-	svgo: svgoConfig,
-	plugins: [
-		imageminMozjpeg({
-			quality: 70
-		}),
-		imageminPNGquant({
-			speed: 1,
-			quality: 90
-		})
-	]
-};
-
 const shellScripts = [];
 const svgs = fs
 	.readdirSync('./assets/images/svg')
@@ -160,15 +129,17 @@ if (svgs.length) {
 	);
 }
 
-chokidar.watch('./assets/styles/').on('add', () => {
-	const main = './assets/styles/main.css';
+const watchFiles = () => {
+	chokidar.watch('./assets/styles/').on('add', () => {
+		const main = './assets/styles/main.scss';
 
-	fs.appendFile(main, '/*CHANGE*/', () => {
-		fs.readFile(main, 'utf8', (err, data) => {
-			fs.writeFileSync(main, data.replace(/\n?\/\*CHANGE\*\//gm, ''));
+		fs.appendFile(main, '/*CHANGE*/', () => {
+			fs.readFile(main, 'utf8', (err, data) => {
+				fs.writeFileSync(main, data.replace(/\n?\/\*CHANGE\*\//gm, ''));
+			});
 		});
 	});
-});
+};
 
 module.exports = env => {
 	const isDevelopment = env.NODE_ENV === 'development';
@@ -183,6 +154,10 @@ module.exports = env => {
 				}
 			})
 		);
+	}
+
+	if (isDevelopment) {
+		watchFiles();
 	}
 
 	const config = {
@@ -267,13 +242,6 @@ module.exports = env => {
 			new BrowserSyncPlugin(browserSyncConfig, {
 				reload: false
 			})
-		);
-	}
-
-	if (isProduction) {
-		config.plugins.push(
-			new UglifyJSPlugin(sourceMap),
-			new ImageminWebpackPlugin(imageminConfig)
 		);
 	}
 
