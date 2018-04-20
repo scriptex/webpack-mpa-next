@@ -1,4 +1,4 @@
-# Webpack-MPA
+# Webpack-MPA-Next
 
 Multiple page application setup with Webpack using SASS, PostCSS, ES2017, PNG & SVG Sprites and more
 
