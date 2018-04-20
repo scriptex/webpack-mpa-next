@@ -14,13 +14,31 @@ In order to use this setup you need to have installed the following dependencies
 
 ## Default setup
 
-The default setup uses php files, but you can easily switch to a file format of your choice.
+The default setup uses PHP files, but you can easily switch to a file format of your choice.
 
 Also, you can always switch to another file/folder structure if the current one does not suit you.
 
 Just keep in mind that the styles should be located in `assets/styles` and the scripts should be located in `assets/scripts`.
 
-## Install
+## Download
+
+You can download this setup [directly](https://github.com/scriptex/webpack-mpa/archive/master.zip) and extract it.
+
+or use NPM or Yarn to install it:
+
+```
+npm i webpack-mpa-next
+```
+
+or
+
+```
+yarn add webpack-mpa-next
+```
+
+Then navigate to the `webpack-mpa-next` folder and proceed with the rest of the instructions.
+
+## Install dependencies
 
 ```
 yarn
