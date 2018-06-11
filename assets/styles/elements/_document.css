@@ -1,6 +1,6 @@
+/* Document */
 html {
 	-webkit-tap-highlight-color: color(var(--color-black) a(0%));
-	tap-highlight-color: color(var(--color-black) a(0%));
 }
 
 body {

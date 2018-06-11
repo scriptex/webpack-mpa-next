@@ -1,6 +1,7 @@
+/* Reset */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -12,7 +13,6 @@ body {
 	text-decoration-skip: ink;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 	text-size-adjust: none;
 	text-rendering: optimizeLegibility;
 }

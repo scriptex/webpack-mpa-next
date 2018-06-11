@@ -1,3 +1,4 @@
+/* Responsive Utility Classes */
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
@@ -35,12 +36,15 @@
 	.hidden-sm {
 		display: none !important;
 	}
+
 	.visible-sm-block {
 		display: block !important;
 	}
+
 	.visible-sm-inline {
 		display: inline !important;
 	}
+
 	.visible-sm-inline-block {
 		display: inline-block !important;
 	}
@@ -50,12 +54,15 @@
 	.hidden-md {
 		display: none !important;
 	}
+
 	.visible-md-block {
 		display: block !important;
 	}
+
 	.visible-md-inline {
 		display: inline !important;
 	}
+
 	.visible-md-inline-block {
 		display: inline-block !important;
 	}
@@ -65,12 +72,15 @@
 	.hidden-lg {
 		display: none !important;
 	}
+
 	.visible-lg-block {
 		display: block !important;
 	}
+
 	.visible-lg-inline {
 		display: inline !important;
 	}
+
 	.visible-lg-inline-block {
 		display: inline-block !important;
 	}

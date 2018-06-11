@@ -1,5 +1,6 @@
+/* Grid */
 .o-grid {
-	@mixin flex-row wrap, stretch, space-between;
+	@mixin flex-row wrap, stretch, space-between; /* stylelint-disable-line */
 
 	&__item {
 		flex: 0 0 100%;

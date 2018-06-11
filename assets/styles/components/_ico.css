@@ -1,5 +1,6 @@
+/* PNG Icons */
 [class^='ico-'] {
-	@util text-hide;
 	display: inline-block;
 	vertical-align: middle;
+	@util text-hide; /* stylelint-disable-line */
 }

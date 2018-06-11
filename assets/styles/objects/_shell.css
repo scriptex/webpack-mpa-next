@@ -1,3 +1,4 @@
+/* Shell */
 .o-shell {
 	max-width: var(--shell-width);
 	padding-right: 1rem;
@@ -6,7 +7,7 @@
 	margin-left: auto;
 
 	&--flex {
-		@mixin flex-row;
+		@mixin flex-row; /* stylelint-disable-line */
 	}
 
 	&--fluid {
