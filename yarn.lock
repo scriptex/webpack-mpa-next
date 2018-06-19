@@ -647,6 +647,10 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@csstools/normalize.css@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-8.0.0.tgz#28be09fb27532de6e7b7f0967fd174da29674552"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -5735,10 +5739,6 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalize.css@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
-
 npm-bundled@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.3.tgz#7e71703d973af3370a9591bafe3a63aca0be2308"
@@ -6299,6 +6299,12 @@ postcss-attribute-case-insensitive@^3.0.0:
     postcss "^6.0.22"
     postcss-selector-parser "^4.0.0"
 
+postcss-browser-comments@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-browser-comments/-/postcss-browser-comments-1.0.0.tgz#1189a566f8705369e32e30738d1534085bb8260e"
+  dependencies:
+    postcss "^6.0.22"
+
 postcss-calc@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"
@@ -6704,6 +6710,15 @@ postcss-normalize-url@^3.0.7:
     normalize-url "^1.4.0"
     postcss "^5.0.14"
     postcss-value-parser "^3.2.3"
+
+postcss-normalize@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-normalize/-/postcss-normalize-6.0.0.tgz#6441b3ced4578f7b7c3b1529a43d1d0ef466996f"
+  dependencies:
+    "@csstools/normalize.css" "^8.0.0"
+    browserslist "^3.2.8"
+    postcss "^6.0.22"
+    postcss-browser-comments "^1.0.0"
 
 postcss-ordered-values@^2.1.0:
   version "2.2.3"

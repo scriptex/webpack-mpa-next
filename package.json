@@ -9,7 +9,12 @@
     "critical": "critical index.php > assets/dist/critical.css",
     "pwa": "create-pwa --icon=\"./assets/images/favicon/icon.png\""
   },
-  "keywords": ["MPA", "webpack", "setup", "multi-page"],
+  "keywords": [
+    "MPA",
+    "webpack",
+    "setup",
+    "multi-page"
+  ],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
   "repository": "https://github.com/scriptex/webpack-mpa",
   "bugs": {
@@ -17,9 +22,7 @@
     "email": "scriptex.bg@gmail.com"
   },
   "license": "MIT",
-  "dependencies": {
-    "normalize.css": "^8.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.0.0-beta.51",
     "@babel/preset-env": "7.0.0-beta.51",
@@ -41,6 +44,7 @@
     "postcss-merge-rules": "^2.1.2",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^3.0.0",
+    "postcss-normalize": "^6.0.0",
     "postcss-preset-env": "^5.1.0",
     "postcss-url": "^7.3.2",
     "postcss-utilities": "^0.8.0",
@@ -53,7 +57,10 @@
     "webpack-spritesmith": "^0.4.1",
     "yargs": "^11.0.0"
   },
-  "browserslist": ["> 1%", "last 2 versions"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "main": "assets/scripts/main.js",
   "private": false
 }

@@ -46,6 +46,9 @@ const postcssConfig = {
 		require('postcss-preset-env')({
 			stage: 0
 		}),
+		require('postcss-normalize')({
+			forceImport: true
+		}),
 		require('postcss-nested'),
 		require('postcss-mixins'),
 		require('postcss-utilities'),
