@@ -105,7 +105,7 @@ npm run build
 
         > "Write your CSS rules without vendor prefixes (in fact, forget about them entirely)"
 
-    * [postcss cssnext](http://cssnext.io/) - use tomorrow's CSS syntax, today
+    * [postcss preset env](https://github.com/csstools/postcss-preset-env) - use tomorrow's CSS syntax, today
     * [postcss nested](https://github.com/postcss/postcss-nested) - use SASS like nesting in CSS
     * [postcss mixins](https://github.com/postcss/postcss-mixins) - PostCSS plugin for mixins
     * [rules merging](https://github.com/ben-eb/postcss-merge-rules)
@@ -157,7 +157,7 @@ The `assets` folder contains several folders:
     * `svg` - contains svg sprite's parts
     * `temp` - contains content images
 * `scripts` - contains the JS modules
-* `styles` - contains the SASS stylesheets
+* `styles` - contains the raw stylesheets
 
 **Each `start` command regenerates the contents of the `dist` folder.**
 
