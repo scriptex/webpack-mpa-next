@@ -16,6 +16,7 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
+webpack-mpa.svg
 
 # Build directory
 /assets/dist
@@ -32,6 +33,3 @@ Thumbs.db
 
 # lock files
 yarn.lock
-
-# Misc
-webpack-mpa.svg
