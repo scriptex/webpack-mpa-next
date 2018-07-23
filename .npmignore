@@ -32,3 +32,6 @@ Thumbs.db
 
 # lock files
 yarn.lock
+
+# Misc
+webpack-mpa.svg
