@@ -93,7 +93,9 @@ npm run build
 
 1.  [PostCSS](http://postcss.org/) stylesheets pre and postprocessing
 
-    -   The CSS file/folder structure utilizes the ITCSS pattern as shown and explained [here](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/)
+    -   PostCSS entry point is `main.css` located in `assets/styles`
+    -   The whole stylesheets file/folder structure is up to you
+    -   [ITCSS](https://github.com/scriptex/itcss) boilerplate used as a starting point.
     -   Glob import in CSS thanks to [postcss-easy-import](https://github.com/TrySound/postcss-easy-import)
     -   [url rebase](https://github.com/postcss/postcss-url) - locates and copies assets from `node_modules`
     -   [postcss-utilities](https://github.com/ismamz/postcss-utilities) - allows usage of utility mixins such as `clearfix`
