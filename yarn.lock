@@ -4770,9 +4770,9 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-itcss@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/itcss/-/itcss-0.1.1.tgz#6a168f3b3bf1340d3ddfed38d740b8942029d7fa"
+itcss@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/itcss/-/itcss-0.2.0.tgz#656f92045551e71399474230544113733ae7364f"
 
 jpeg-js@0.0.4:
   version "0.0.4"
