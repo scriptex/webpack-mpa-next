@@ -45,9 +45,6 @@ const postcssConfig = {
 		require('postcss-preset-env')({
 			stage: 0
 		}),
-		require('postcss-normalize')({
-			forceImport: true
-		}),
 		require('postcss-nested'),
 		require('postcss-mixins'),
 		require('postcss-utilities'),
@@ -65,7 +62,7 @@ const babelConfig = [
 			presets: ['@babel/env'],
 			plugins: [
 				// Stage 2
-				['@babel/plugin-proposal-decorators', { 'legacy': true }],
+				['@babel/plugin-proposal-decorators', { legacy: true }],
 				'@babel/plugin-proposal-function-sent',
 				'@babel/plugin-proposal-export-namespace-from',
 				'@babel/plugin-proposal-numeric-separator',
@@ -73,9 +70,9 @@ const babelConfig = [
 				// Stage 3
 				'@babel/plugin-syntax-dynamic-import',
 				'@babel/plugin-syntax-import-meta',
-				['@babel/plugin-proposal-class-properties', { 'loose': false }],
+				['@babel/plugin-proposal-class-properties', { loose: false }],
 				'@babel/plugin-proposal-json-strings'
-			  ]
+			]
 		}
 	}
 ];
@@ -179,11 +176,7 @@ module.exports = env => {
 			filename: 'dist/app.js'
 		},
 		resolve: {
-			modules: [
-				'node_modules',
-				'./assets/scripts',
-				'./assets/images/sprite'
-			]
+			modules: ['node_modules', './assets/scripts', './assets/images/sprite']
 		},
 		module: {
 			rules: [
