@@ -1,13 +1,13 @@
-![Webpack MPA Logo](https://raw.githubusercontent.com/scriptex/webpack-mpa/postcss/webpack-mpa.svg?sanitize=true)
+![Webpack MPA Logo](https://raw.githubusercontent.com/scriptex/webpack-mpa-next/master/webpack-mpa.svg?sanitize=true)
 
-[![GitHub release](https://img.shields.io/github/release/scriptex/webpack-mpa.svg)](https://github.com/scriptex/webpack-mpa/releases/latest)
-[![GitHub issues](https://img.shields.io/github/issues/scriptex/webpack-mpa.svg)](https://github.com/scriptex/webpack-mpa/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/webpack-mpa.svg)](https://github.com/scriptex/webpack-mpa/commits/postcss)
-[![Build Status](https://travis-ci.org/scriptex/webpack-mpa.svg?branch=postcss)](https://travis-ci.org/scriptex/webpack-mpa)
+[![GitHub release](https://img.shields.io/github/release/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/releases/latest)
+[![GitHub issues](https://img.shields.io/github/issues/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/commits/postcss)
+[![Build Status](https://travis-ci.org/scriptex/webpack-mpa-next.svg?branch=master)](https://travis-ci.org/scriptex/webpack-mpa-next)
 [![npm](https://img.shields.io/npm/dt/webpack-mpa-next.svg)](https://www.npmjs.com/package/webpack-mpa)
 [![npm](https://img.shields.io/npm/v/webpack-mpa-next.svg)](https://www.npmjs.com/package/webpack-mpa)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/webpack-mpa/README.md)](https://github.com/scriptex/webpack-mpa/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/webpack-mpa.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/webpack-mpa-next.svg)](https://greenkeeper.io/)
 
 # Webpack-MPA-Next
 
