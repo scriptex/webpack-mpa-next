@@ -1,4 +1,4 @@
-![Webpack MPA Logo](https://raw.githubusercontent.com/scriptex/webpack-mpa-next/master/webpack-mpa.svg?sanitize=true)
+![Webpack MPA Next Logo](https://raw.githubusercontent.com/scriptex/webpack-mpa-next/master/webpack-mpa.svg?sanitize=true)
 
 [![GitHub release](https://img.shields.io/github/release/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/issues)
@@ -35,7 +35,7 @@ Just keep in mind that the styles should be located in `assets/styles` and the s
 
 ## Download
 
-You can download this setup [directly](https://github.com/scriptex/webpack-mpa/archive/postcss.zip) and extract it.
+You can download this setup [directly](https://github.com/scriptex/webpack-mpa-next/archive/postcss.zip) and extract it.
 
 or use NPM or Yarn to install it:
 
@@ -53,21 +53,21 @@ Then navigate to the `webpack-mpa-next` folder and proceed with the rest of the 
 
 ## Global installation
 
-It is possible to use the CLI tool included in Webpack MPA. In order to do this you must install Webpack MPA globally:
+It is possible to use the CLI tool included in Webpack MPA Next. In order to do this you must install Webpack MPA Next globally:
 
 ```sh
-npm i webpack-mpa ncp -g
+npm i webpack-mpa-next ncp -g
 ```
 
 or
 
 ```sh
-yarn global add webpack-mpa ncp
+yarn global add webpack-mpa-next ncp
 ```
 
-`ncp` is a peer dependency and is needed for the CLI interface. If you don't install it you will not be able to use the `wmpa` binary.
+`ncp` is a peer dependency and is needed for the CLI interface. If you don't install it you will not be able to use the `wmpan` binary.
 
-The `wmpa` binary is now available for you to use.
+The `wmpan` binary is now available for you to use.
 
 Go to your new project folder and execute
 
