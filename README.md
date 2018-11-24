@@ -51,6 +51,32 @@ yarn add webpack-mpa-next
 
 Then navigate to the `webpack-mpa-next` folder and proceed with the rest of the instructions.
 
+## Global installation
+
+It is possible to use the CLI tool included in Webpack MPA. In order to do this you must install Webpack MPA globally:
+
+```sh
+npm i webpack-mpa ncp -g
+```
+
+or
+
+```sh
+yarn global add webpack-mpa ncp
+```
+
+`ncp` is a peer dependency and is needed for the CLI interface. If you don't install it you will not be able to use the `wmpa` binary.
+
+The `wmpa` binary is now available for you to use.
+
+Go to your new project folder and execute
+
+```sh
+wmpa
+```
+
+Your new project is setup!
+
 ## Install dependencies
 
 ```sh
