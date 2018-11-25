@@ -1,6 +1,6 @@
 {
 	"name": "webpack-mpa-next",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "Multi page app setup with webpack",
 	"scripts": {
 		"build": "webpack --env.NODE_ENV=production",
@@ -51,7 +51,6 @@
 		"cssnano": "4.1.7",
 		"extract-text-webpack-plugin": "4.0.0-beta.0",
 		"file-loader": "2.0.0",
-		"ncp": "2.0.0",
 		"postcss-easy-import": "3.0.0",
 		"postcss-flexbugs-fixes": "4.1.0",
 		"postcss-loader": "3.0.0",
@@ -69,9 +68,6 @@
 		"webpack-spritesmith": "0.5.4",
 		"yargs": "12.0.5"
 	},
-	"peerDependencies": {
-		"ncp": "2.0.0"
-	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
@@ -79,6 +75,6 @@
 	"main": "assets/scripts/main.js",
 	"private": false,
 	"bin": {
-		"wmpan": "./cli.js"
+		"wmpan": "./bin/cli.js"
 	}
 }
