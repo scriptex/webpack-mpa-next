@@ -7,7 +7,6 @@
 [![npm](https://img.shields.io/npm/dt/webpack-mpa-next.svg)](https://www.npmjs.com/package/webpack-mpa-next)
 [![npm](https://img.shields.io/npm/v/webpack-mpa-next.svg)](https://www.npmjs.com/package/webpack-mpa-next)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/webpack-mpa-next/README.md)](https://github.com/scriptex/webpack-mpa-next/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/webpack-mpa-next.svg)](https://greenkeeper.io/)
 
 # Webpack-MPA-Next
 
