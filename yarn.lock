@@ -6379,10 +6379,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-itcss@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/itcss/-/itcss-0.2.0.tgz#656f92045551e71399474230544113733ae7364f"
-  integrity sha512-2UOeCdNaqVxUvrWDKVZOCdUjaXUBqa7HOi3elJMsG2ohmzk2dBrlyfUPtOTke+NQSrchgjBW1n2L9dp3h3yDVg==
+itcss@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/itcss/-/itcss-1.1.0.tgz#4efc2fdfd942e6a52e954b856a7ba640c8f64e2e"
+  integrity sha512-0R8GBKltxW49CdP47o4qEjeC9Y3XIUyk6TTupjefslcZgtKWJYboHl2aS0sxZWdHPOI0+zThoLR+gjfr/gEB/g==
 
 jpeg-js@0.0.4:
   version "0.0.4"
