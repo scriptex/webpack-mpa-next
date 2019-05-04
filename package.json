@@ -64,7 +64,7 @@
 		"postcss-nested": "4.1.2",
 		"postcss-preset-env": "6.6.0",
 		"postcss-url": "8.0.0",
-		"postcss-utilities": "0.8.0",
+		"postcss-utilities": "0.8.1",
 		"postcss-watch-folder": "1.0.0",
 		"spritesh": "1.2.1",
 		"stylelint": "9.10.1",
