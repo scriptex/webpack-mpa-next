@@ -55,7 +55,7 @@
 		"eslint": "6.7.1",
 		"eslint-config-recommended": "4.0.0",
 		"extract-text-webpack-plugin": "4.0.0-beta.0",
-		"file-loader": "4.3.0",
+		"file-loader": "5.0.2",
 		"postcss-easy-import": "3.0.0",
 		"postcss-flexbugs-fixes": "4.1.0",
 		"postcss-loader": "3.0.0",
