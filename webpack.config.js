@@ -1,7 +1,9 @@
+// @ts-nocheck
 const fs = require('fs');
-const url = require('url');
 const path = require('path');
+const { exec } = require('child_process');
 const { argv } = require('yargs');
+const { parse } = require('url');
 
 const { ProvidePlugin } = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -10,9 +12,14 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
+const { url, server, NODE_ENV } = argv;
 const sourceMap = {
-	sourceMap: argv.env.NODE_ENV === 'development'
+	sourceMap: NODE_ENV === 'development'
 };
+
+if (server) {
+	exec('php index.php > index.html');
+}
 
 const svgoConfig = {
 	plugins: [
@@ -81,12 +88,23 @@ const browserSyncConfig = {
 	host: 'localhost',
 	port: 3000,
 	open: 'external',
+	/* eslint-disable no-mixed-spaces-and-tabs */
 	files: [
-		'**/*.php',
+		server
+			? {
+					match: ['*.php'],
+					fn(_, file) {
+						const name = file.replace(/.php$/, '');
+
+						exec(`php ${file} > ${name}.html`);
+					}
+			  }
+			: '**/*.php',
 		'**/*.html',
 		'./assets/dist/app.css',
 		'./assets/dist/app.js'
 	],
+	/* eslint-enable */
 	ghostMode: {
 		clicks: false,
 		scroll: true,
@@ -131,22 +149,16 @@ const cleanConfig = {
 };
 
 const shellScripts = [];
-const svgs = fs
-	.readdirSync('./assets/images/svg')
-	.filter(svg => svg[0] !== '.');
+const svgs = fs.readdirSync('./assets/images/svg').filter(svg => svg[0] !== '.');
 
 if (svgs.length) {
-	shellScripts.push(
-		'svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig)
-	);
-	shellScripts.push(
-		'spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-'
-	);
+	shellScripts.push('svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig));
+	shellScripts.push('spritesh -q -i assets/images/svg -o ./assets/dist/sprite.svg -p svg-');
 }
 
-module.exports = env => {
-	const isDevelopment = env.NODE_ENV === 'development';
-	const isProduction = env.NODE_ENV === 'production';
+module.exports = () => {
+	const isDevelopment = NODE_ENV === 'development';
+	const isProduction = NODE_ENV === 'production';
 
 	if (isProduction) {
 		postcssConfig.plugins.push(
@@ -169,7 +181,7 @@ module.exports = env => {
 	}
 
 	const config = {
-		mode: env.NODE_ENV,
+		mode: NODE_ENV,
 		entry: ['./assets/styles/main.css', './assets/scripts/main.js'],
 		output: {
 			path: path.resolve(__dirname, './assets'),
@@ -236,9 +248,16 @@ module.exports = env => {
 	};
 
 	if (isDevelopment) {
-		if (env.url) {
-			browserSyncConfig.host = url.parse(env.url).hostname;
-			browserSyncConfig.proxy = env.url;
+		if (url) {
+			browserSyncConfig.host = parse(url).hostname;
+			browserSyncConfig.proxy = url;
+		}
+
+		if (server) {
+			delete browserSyncConfig.host;
+			delete browserSyncConfig.proxy;
+
+			browserSyncConfig.server = true;
 		}
 
 		config.plugins.push(
