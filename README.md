@@ -147,6 +147,14 @@ npm run build
 
     If you do not wish to use the retina sprite, comment the `@include retina-sprites($retina-groups);` statement in `main.scss` file.
 
+    In order to use the PNG sprite, you need to do so by adding the relevant icons in your markup:
+
+    ```html
+    <i class="ico-home"></i>
+    ```
+
+    The class name corresponds to the name of the PNG file.
+
 3.  Latest EcmaScript support
 
     -   Usage of the latest features in EcmaScript
@@ -169,7 +177,7 @@ npm run build
     npm start -- --env.url=http://your.app
     ```
 
-5.  Images optimization using [Imagemin](https://github.com/Klathmon/imagemin-webpack-plugin)
+5.  Images optimization using [Optisize](https://github.com/three11/optisize)
 
 6.  SVG Sprite generating using [spritesh](https://www.npmjs.com/package/spritesh)
 
@@ -177,7 +185,25 @@ npm run build
 
     This action is performed each time the `start` command is invoked.
 
-7.  All front-end assets are stored in an auto-generated `dist` folder.
+    In order to use the SVG sprite you first need to include it in your markup. You can do so in several ways:
+
+    -   If you're using PHP files, include it in each of your PHP files: `<?php include_once('assets/dist/sprite.svg'); ?>`
+    -   If you're using HTML files, paste the content of the SVG sprite in each of your HTML files.
+    -   If you're using another templating method (posthtml include, handlebars, ejs, etc) you need to do so according to its documentation.
+
+    It is preferred to include the SVG sprite right after your opening `<body>` tag
+
+    In order to add an SVG icon in your markup, you can do so by using the SVG `<use>` tag:
+
+    This action is performed each time the `start` command is invoked.
+
+    ```html
+    <svg class="svg-home">
+    	<use xlink:href="#svg-home"></use>
+    </svg>
+    ```
+
+7)  All front-end assets are stored in an auto-generated `dist` folder.
 
 ## Assets
 
