@@ -6613,10 +6613,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-itcss@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/itcss/-/itcss-1.4.0.tgz#3efbeb62013ccc630cafd64a48de42f4afce7b4b"
-  integrity sha512-aigxSFwVa8pxEod1sJqFDY6vdOY6zOtQdbFZB+eZ7LpEVoR8vLDYis152eat90Y+DKwzeFR4WhZMucjJvUaQ2A==
+itcss@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/itcss/-/itcss-1.5.1.tgz#79400805f8ccb17eeedb0f5a99291f7d042132a6"
+  integrity sha512-c202yUx2jsvqWtTSGk7voyz2xYtDfJtiXTVsEcM5ZJAT86MvRpB7LM8pjpczULWKehINqjtBWR0uEJRNe6NSQA==
 
 jimp@^0.9.3:
   version "0.9.8"
