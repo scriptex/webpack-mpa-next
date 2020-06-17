@@ -3,7 +3,7 @@
 [![GitHub release](https://img.shields.io/github/release/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/webpack-mpa-next.svg)](https://github.com/scriptex/webpack-mpa-next/commits/master)
-[![Build Status](https://travis-ci.org/scriptex/webpack-mpa-next.svg?branch=master)](https://travis-ci.org/scriptex/webpack-mpa-next)
+[![Build Status](https://travis-ci.com/scriptex/webpack-mpa-next.svg?branch=master)](https://travis-ci.com/scriptex/webpack-mpa-next)
 [![Build Status](https://circleci.com/gh/scriptex/webpack-mpa-next.svg?style=svg)](https://circleci.com/gh/scriptex/webpack-mpa-next)
 [![npm](https://img.shields.io/npm/dt/webpack-mpa-next.svg)](https://www.npmjs.com/package/webpack-mpa-next)
 [![npm](https://img.shields.io/npm/v/webpack-mpa-next.svg)](https://www.npmjs.com/package/webpack-mpa-next)
