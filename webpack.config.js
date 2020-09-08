@@ -43,7 +43,7 @@ const svgoConfig = {
 	]
 };
 
-const postcssConfig = {
+const postcssOptions = {
 	ident: 'postcss',
 	plugins: [
 		require('postcss-easy-import'),
@@ -67,20 +67,7 @@ const babelConfig = [
 		options: {
 			cacheDirectory: true,
 			comments: false,
-			presets: ['@babel/env'],
-			plugins: [
-				// Stage 2
-				['@babel/plugin-proposal-decorators', { legacy: true }],
-				'@babel/plugin-proposal-function-sent',
-				'@babel/plugin-proposal-export-namespace-from',
-				'@babel/plugin-proposal-numeric-separator',
-				'@babel/plugin-proposal-throw-expressions',
-				// Stage 3
-				'@babel/plugin-syntax-dynamic-import',
-				'@babel/plugin-syntax-import-meta',
-				['@babel/plugin-proposal-class-properties', { loose: false }],
-				'@babel/plugin-proposal-json-strings'
-			]
+			presets: ['@babel/env']
 		}
 	}
 ];
@@ -160,11 +147,11 @@ module.exports = () => {
 	const isProduction = NODE_ENV === 'production';
 
 	if (isProduction) {
-		postcssConfig.plugins.push(require('postcss-merge-rules'), require('cssnano')());
+		postcssOptions.plugins.push(require('postcss-merge-rules'), require('cssnano')());
 	}
 
 	if (isDevelopment) {
-		postcssConfig.plugins.push(
+		postcssOptions.plugins.push(
 			require('postcss-watch-folder')({
 				folder: './assets/styles',
 				main: './assets/styles/main.css'
@@ -199,7 +186,7 @@ module.exports = () => {
 						},
 						{
 							loader: 'postcss-loader',
-							options: postcssConfig
+							options: { postcssOptions }
 						}
 					]
 				},
