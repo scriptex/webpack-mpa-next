@@ -51,12 +51,24 @@ const postcssOptions = {
 			url: 'rebase'
 		}),
 		require('postcss-preset-env')({
-			stage: 0
+			stage: 0,
+			features: {
+				'color-mod-function': {
+					importFrom: ['node_modules/itcss/assets/settings/_colors.css', 'assets/styles/main.css']
+				}
+			}
 		}),
+		require('postcss-each-variables'),
+		require('postcss-each'),
+		require('postcss-for'),
 		require('postcss-nested'),
 		require('postcss-mixins'),
+		require('postcss-extend'),
 		require('postcss-utilities'),
-		require('postcss-flexbugs-fixes')
+		require('postcss-flexbugs-fixes'),
+		require('postcss-merge-rules'),
+		require('postcss-custom-media'),
+		require('postcss-calc')
 	],
 	...sourceMap
 };
