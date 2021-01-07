@@ -7,11 +7,11 @@ const { argv } = require('yargs');
 const { parse } = require('url');
 
 const { ProvidePlugin } = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { url, server, NODE_ENV } = argv;
 const sourceMap = {
@@ -124,7 +124,8 @@ const browserSyncConfig = {
 };
 
 const extractTextConfig = {
-	filename: 'dist/app.css'
+	filename: 'dist/app.css',
+	allChunks: true
 };
 
 const spritesmithConfig = {
@@ -187,19 +188,18 @@ module.exports = () => {
 			rules: [
 				{
 					test: /\.(sa|sc|c)ss$/,
-					use: [
-						{
-							loader: MiniCssExtractPlugin.loader
-						},
-						{
-							loader: 'css-loader',
-							options: sourceMap
-						},
-						{
-							loader: 'postcss-loader',
-							options: { postcssOptions }
-						}
-					]
+					use: ExtractTextPlugin.extract({
+						use: [
+							{
+								loader: 'css-loader',
+								options: sourceMap
+							},
+							{
+								loader: 'postcss-loader',
+								options: { postcssOptions }
+							}
+						]
+					})
 				},
 				{
 					test: /\.js$/,
@@ -228,7 +228,7 @@ module.exports = () => {
 				jQuery: 'jquery',
 				'window.jQuery': 'jquery'
 			}),
-			new MiniCssExtractPlugin(extractTextConfig),
+			new ExtractTextPlugin(extractTextConfig),
 			new SpritesmithPlugin(spritesmithConfig),
 			new CleanWebpackPlugin(['../assets/dist/'], cleanConfig),
 			new WebpackShellPlugin({
