@@ -32,8 +32,8 @@
 		"itcss": "1.8.0"
 	},
 	"devDependencies": {
-		"@babel/core": "7.12.16",
-		"@babel/preset-env": "7.12.16",
+		"@babel/core": "7.12.17",
+		"@babel/preset-env": "7.12.17",
 		"@three11/optisize": "1.3.0",
 		"babel-loader": "8.2.2",
 		"browser-sync": "2.26.14",
