@@ -1,21 +1,21 @@
 // @ts-nocheck
 
-const fs = require('fs');
-const path = require('path');
 const { exec } = require('child_process');
-const { argv } = require('yargs');
 const { parse } = require('url');
+const { resolve } = require('path');
+const { readdirSync } = require('fs');
 
+const { argv } = require('yargs');
 const { ProvidePlugin } = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const WebpackShellPlugin = require('webpack-shell-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin-next');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const { url, server, NODE_ENV } = argv;
+const { url, server, mode } = argv;
 const sourceMap = {
-	sourceMap: NODE_ENV === 'development'
+	sourceMap: mode === 'development'
 };
 
 if (server) {
@@ -24,22 +24,22 @@ if (server) {
 
 const svgoConfig = {
 	plugins: [
-		{ cleanupAttrs: true },
-		{ removeDoctype: true },
-		{ removeXMLProcInst: true },
-		{ removeComments: true },
-		{ removeMetadata: true },
-		{ removeUselessDefs: true },
-		{ removeEditorsNSData: true },
-		{ removeEmptyAttrs: true },
-		{ removeHiddenElems: false },
-		{ removeEmptyText: true },
-		{ removeEmptyContainers: true },
-		{ cleanupEnableBackground: true },
-		{ removeViewBox: false },
-		{ cleanupIDs: false },
-		{ convertStyleToAttrs: true },
-		{ removeUselessStrokeAndFill: true }
+		{ name: 'cleanupAttrs', active: true },
+		{ name: 'removeDoctype', active: true },
+		{ name: 'removeXMLProcInst', active: true },
+		{ name: 'removeComments', active: true },
+		{ name: 'removeMetadata', active: true },
+		{ name: 'removeUselessDefs', active: true },
+		{ name: 'removeEditorsNSData', active: true },
+		{ name: 'removeEmptyAttrs', active: true },
+		{ name: 'removeHiddenElems', active: false },
+		{ name: 'removeEmptyText', active: true },
+		{ name: 'removeEmptyContainers', active: true },
+		{ name: 'cleanupEnableBackground', active: true },
+		{ name: 'removeViewBox', active: false },
+		{ name: 'cleanupIDs', active: false },
+		{ name: 'convertStyleToAttrs', active: true },
+		{ name: 'removeUselessStrokeAndFill', active: true }
 	]
 };
 
@@ -124,18 +124,17 @@ const browserSyncConfig = {
 };
 
 const extractTextConfig = {
-	filename: 'dist/app.css',
-	allChunks: true
+	filename: 'dist/app.css'
 };
 
 const spritesmithConfig = {
 	src: {
-		cwd: path.resolve(__dirname, 'assets/images/sprite'),
+		cwd: resolve(__dirname, 'assets/images/sprite'),
 		glob: '*.png'
 	},
 	target: {
-		image: path.resolve(__dirname, './assets/dist/sprite.png'),
-		css: path.resolve(__dirname, './assets/styles/_sprite.css')
+		image: resolve(__dirname, './assets/dist/sprite.png'),
+		css: resolve(__dirname, './assets/styles/_sprite.css')
 	},
 	apiOptions: {
 		cssImageRef: '../dist/sprite.png'
@@ -150,7 +149,7 @@ const cleanConfig = {
 };
 
 const shellScripts = [];
-const svgs = fs.readdirSync('./assets/images/svg').filter(svg => svg[0] !== '.');
+const svgs = readdirSync('./assets/images/svg').filter(svg => svg[0] !== '.');
 
 if (svgs.length) {
 	shellScripts.push('svgo -f assets/images/svg --config=' + JSON.stringify(svgoConfig));
@@ -158,8 +157,8 @@ if (svgs.length) {
 }
 
 module.exports = () => {
-	const isDevelopment = NODE_ENV === 'development';
-	const isProduction = NODE_ENV === 'production';
+	const isDevelopment = mode === 'development';
+	const isProduction = mode === 'production';
 
 	if (isProduction) {
 		postcssOptions.plugins.push(require('postcss-merge-rules'), require('cssnano')());
@@ -175,10 +174,10 @@ module.exports = () => {
 	}
 
 	const config = {
-		mode: NODE_ENV,
+		mode: mode,
 		entry: ['./assets/styles/main.css', './assets/scripts/main.js'],
 		output: {
-			path: path.resolve(__dirname, './assets'),
+			path: resolve(__dirname, './assets'),
 			filename: 'dist/app.js'
 		},
 		resolve: {
@@ -188,18 +187,19 @@ module.exports = () => {
 			rules: [
 				{
 					test: /\.(sa|sc|c)ss$/,
-					use: ExtractTextPlugin.extract({
-						use: [
-							{
-								loader: 'css-loader',
-								options: sourceMap
-							},
-							{
-								loader: 'postcss-loader',
-								options: { postcssOptions }
-							}
-						]
-					})
+					use: [
+						{
+							loader: MiniCssExtractPlugin.loader
+						},
+						{
+							loader: 'css-loader',
+							options: sourceMap
+						},
+						{
+							loader: 'postcss-loader',
+							options: { postcssOptions }
+						}
+					]
 				},
 				{
 					test: /\.js$/,
@@ -228,11 +228,13 @@ module.exports = () => {
 				jQuery: 'jquery',
 				'window.jQuery': 'jquery'
 			}),
-			new ExtractTextPlugin(extractTextConfig),
+			new MiniCssExtractPlugin(extractTextConfig),
 			new SpritesmithPlugin(spritesmithConfig),
 			new CleanWebpackPlugin(['../assets/dist/'], cleanConfig),
 			new WebpackShellPlugin({
-				onBuildStart: shellScripts
+				onBuildStart: {
+					scripts: shellScripts
+				}
 			})
 		],
 		externals: {
