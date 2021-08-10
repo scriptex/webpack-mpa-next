@@ -1,3 +1,8 @@
 {
-	"extends": ["stylelint-config-recommended"]
+	"extends": [
+		"stylelint-config-recommended"
+	],
+	"plugins": [
+		"stylelint-no-unsupported-browser-features"
+	]
 }
