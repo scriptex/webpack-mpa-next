@@ -10,8 +10,8 @@ const { ProvidePlugin } = require('webpack');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin-next');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const { url, server, mode } = argv;
 const sourceMap = {
@@ -103,7 +103,7 @@ const browserSyncConfig = {
 };
 
 const extractTextConfig = {
-	filename: 'dist/app.css'
+	filename: 'app.css'
 };
 
 const spritesmithConfig = {
@@ -122,9 +122,7 @@ const spritesmithConfig = {
 };
 
 const cleanConfig = {
-	verbose: false,
-	exclude: ['sprite.svg'],
-	allowExternal: true
+	cleanOnceBeforeBuildPatterns: ['**/*', '!sprite.svg']
 };
 
 const shellScripts = [];
@@ -156,8 +154,8 @@ module.exports = () => {
 		mode: mode,
 		entry: ['./assets/styles/main.css', './assets/scripts/main.js'],
 		output: {
-			path: resolve(__dirname, './assets'),
-			filename: 'dist/app.js'
+			path: resolve(__dirname, './assets/dist'),
+			filename: 'app.js'
 		},
 		resolve: {
 			modules: ['node_modules', './assets/scripts', './assets/images/sprite']
@@ -187,17 +185,7 @@ module.exports = () => {
 				},
 				{
 					test: /\.(jpe?g|gif|png|svg|woff2?|ttf|eot|wav|mp3|mp4)(\?.*$|$)/,
-					use: [
-						{
-							loader: 'file-loader',
-							options: {
-								name: '[hash].[ext]',
-								context: '',
-								publicPath: './',
-								outputPath: './dist'
-							}
-						}
-					]
+					type: 'asset/resource'
 				}
 			]
 		},
@@ -209,7 +197,7 @@ module.exports = () => {
 			}),
 			new MiniCssExtractPlugin(extractTextConfig),
 			new SpritesmithPlugin(spritesmithConfig),
-			new CleanWebpackPlugin(['../assets/dist/'], cleanConfig),
+			new CleanWebpackPlugin(cleanConfig),
 			new WebpackShellPlugin({
 				onBuildStart: {
 					scripts: shellScripts
