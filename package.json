@@ -49,7 +49,7 @@
 		"eslint-config-recommended": "4.1.0",
 		"eslint-plugin-compat": "4.0.0",
 		"mini-css-extract-plugin": "2.4.5",
-		"postcss": "8.4.0",
+		"postcss": "8.4.1",
 		"postcss-calc": "8.0.0",
 		"postcss-cli": "9.0.2",
 		"postcss-color-mod-function": "3.0.3",
