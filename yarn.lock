@@ -6157,10 +6157,10 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
-itcss@1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/itcss/-/itcss-1.9.0.tgz#3c76d03c6661bb0635d9997246d60ea4b5414887"
-  integrity sha512-Vt/ntYJjaIYnRUhcjFG+S75J9wzYCQ44lp31GvdutjFgZsjZOwvkZmjYN5cihff07IiuY+4dUu2WGuTlInpMTw==
+itcss@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/itcss/-/itcss-2.0.0.tgz#3ff602dba458c1ba8b1a95c77b9e33c75c1d354c"
+  integrity sha512-dOeY0KMGfwPK7QCGuYs/PmljGyWmYU9KVfKZ0fLYoA3Lv4jm9/CQv+PP0fJsVsBfwomnP8XsjuSYPp4zstLiDQ==
 
 jest-worker@^27.0.6:
   version "27.4.2"
