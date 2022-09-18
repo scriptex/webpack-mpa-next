@@ -69,7 +69,7 @@
 		"postcss-utilities": "0.8.4",
 		"postcss-watch-folder": "2.0.0",
 		"spritesh": "1.2.1",
-		"stylelint": "14.11.0",
+		"stylelint": "14.12.0",
 		"stylelint-config-recommended": "9.0.0",
 		"stylelint-no-unsupported-browser-features": "5.0.4",
 		"svgo": "2.8.0",
