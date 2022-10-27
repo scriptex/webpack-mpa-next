@@ -9,6 +9,9 @@ jobs:
                   name: autoreconf
                   command: sudo apt install automake
             - run:
+                  name: xss
+                  command: sudo apt update && sudo apt install libxss1
+            - run:
                   name: install
                   command: yarn
             - run:
