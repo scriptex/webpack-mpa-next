@@ -1,6 +1,6 @@
 {
 	"name": "webpack-mpa-next",
-	"version": "3.12.0",
+	"version": "4.0.0",
 	"description": "Multi page app setup with webpack",
 	"keywords": [
 		"MPA",
@@ -29,7 +29,6 @@
 	"scripts": {
 		"build": "webpack --mode=production",
 		"start": "webpack --watch --mode=development",
-		"optisize": "optisize --src=\"./assets/images\"",
 		"html": "php index.php > index.html",
 		"critical": "node critical.mjs",
 		"rm-html": "rm index.html",
@@ -45,7 +44,6 @@
 	"devDependencies": {
 		"@babel/core": "7.20.12",
 		"@babel/preset-env": "7.20.2",
-		"@three11/optisize": "3.0.1",
 		"autoprefixer": "10.4.13",
 		"babel-loader": "9.1.2",
 		"browser-sync": "2.27.11",
@@ -58,7 +56,7 @@
 		"cssnano": "5.1.14",
 		"eslint": "8.33.0",
 		"eslint-config-recommended": "4.1.0",
-		"eslint-plugin-compat": "4.1.0",
+		"eslint-plugin-compat": "4.0.2",
 		"mini-css-extract-plugin": "2.7.2",
 		"postcss": "8.4.21",
 		"postcss-calc": "8.2.4",
@@ -87,6 +85,12 @@
 		"webpack-cli": "5.0.1",
 		"webpack-shell-plugin-next": "2.3.1",
 		"webpack-spritesmith": "1.1.0"
+	},
+	"resolutions": {
+		"got": "^11.8.5",
+		"http-cache-semantics": "^4.1.1",
+		"semver-regex": "^3.1.4",
+		"ua-parser-js": "^1.0.33"
 	},
 	"bin": {
 		"wmpan": "./bin/cli.js"
