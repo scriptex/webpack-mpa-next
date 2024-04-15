@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 const { exec } = require('child_process');
 const { parse } = require('url');
 const { resolve } = require('path');
@@ -27,7 +25,6 @@ const browserSyncConfig = server => ({
 	host: 'localhost',
 	port: 3000,
 	open: 'external',
-	/* eslint-disable no-mixed-spaces-and-tabs */
 	files: [
 		server
 			? {
@@ -43,7 +40,6 @@ const browserSyncConfig = server => ({
 		'./assets/dist/app.css',
 		'./assets/dist/app.js'
 	],
-	/* eslint-enable */
 	ghostMode: {
 		clicks: false,
 		scroll: true,
