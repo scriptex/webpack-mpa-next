@@ -6362,13 +6362,12 @@ postcss-cli@11.0.0:
     slash "^5.0.0"
     yargs "^17.0.0"
 
-postcss-color-mod-function@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-3.0.3.tgz#816ba145ac11cc3cb6baa905a75a49f903e4d31d"
-  integrity sha512-YP4VG+xufxaVtzV6ZmhEtc+/aTXH3d0JLpnYfxqTvwZPbJhWqp8bSY3nfNzNRFLgB4XSaBA82OE4VjOOKpCdVQ==
+postcss-color-mod-function@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-4.0.0.tgz#845768053b93445e755be91158014f731c168607"
+  integrity sha512-uBP6fWiFxGAwpMyHI0csBzCurlLcj2gTipF/gJyMbb0lt4aEI6doIrOcPHPn7RFTL5CdMfT7bO8sxbPMVBhmNw==
   dependencies:
     "@csstools/convert-colors" "^1.4.0"
-    postcss "^7.0.2"
     postcss-values-parser "^2.0.0"
 
 postcss-colormin@^7.0.2:
@@ -6851,7 +6850,7 @@ postcss@^6.0.1:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.17, postcss@^7.0.2:
+postcss@^7.0.17:
   version "7.0.39"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.39.tgz#9624375d965630e2e1f2c02a935c82a59cb48309"
   integrity sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==
