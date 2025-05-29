@@ -42,7 +42,7 @@
 		"itcss": "2.1.0"
 	},
 	"devDependencies": {
-		"@babel/core": "7.27.1",
+		"@babel/core": "7.27.3",
 		"@babel/preset-env": "7.27.2",
 		"autoprefixer": "10.4.21",
 		"babel-loader": "10.0.0",
@@ -62,7 +62,7 @@
 		"postcss-calc": "10.1.1",
 		"postcss-cli": "11.0.1",
 		"postcss-color-mod-function": "4.1.1",
-		"postcss-custom-media": "11.0.5",
+		"postcss-custom-media": "11.0.6",
 		"postcss-each": "1.1.0",
 		"postcss-each-variables": "0.3.0",
 		"postcss-easy-import": "4.0.0",
@@ -81,7 +81,7 @@
 		"stylelint-config-recommended": "16.0.0",
 		"stylelint-no-unsupported-browser-features": "8.0.4",
 		"svg-symbol-sprite": "1.5.2",
-		"webpack": "5.99.8",
+		"webpack": "5.99.9",
 		"webpack-cli": "6.0.1",
 		"webpack-shell-plugin-next": "2.3.2",
 		"webpack-spritesmith": "1.1.0"
