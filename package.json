@@ -42,7 +42,7 @@
 		"itcss": "2.1.0"
 	},
 	"devDependencies": {
-		"@babel/core": "7.27.3",
+		"@babel/core": "7.27.4",
 		"@babel/preset-env": "7.27.2",
 		"autoprefixer": "10.4.21",
 		"babel-loader": "10.0.0",
@@ -58,7 +58,7 @@
 		"eslint-config-recommended": "4.1.0",
 		"eslint-plugin-compat": "6.0.2",
 		"mini-css-extract-plugin": "2.9.2",
-		"postcss": "8.5.4",
+		"postcss": "8.5.5",
 		"postcss-calc": "10.1.1",
 		"postcss-cli": "11.0.1",
 		"postcss-color-mod-function": "4.1.1",
