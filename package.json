@@ -83,7 +83,7 @@
 		"svg-symbol-sprite": "1.5.2",
 		"webpack": "5.100.2",
 		"webpack-cli": "6.0.1",
-		"webpack-shell-plugin-next": "2.3.2",
+		"webpack-shell-plugin-next": "2.3.3",
 		"webpack-spritesmith": "1.1.0"
 	},
 	"bin": {
