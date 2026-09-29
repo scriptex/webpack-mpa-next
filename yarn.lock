@@ -2969,7 +2969,7 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-cssnano-preset-default@^9.0.5:
+cssnano-preset-default@^9.1.1:
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/cssnano-preset-default/-/cssnano-preset-default-9.1.1.tgz#74e26d4770a9d8320cb8242301d11bab417c06ab"
   integrity sha512-c+9shS5wCw+hpS2TzZ4ndZQzM4ffMjzKqfPc/xxzUJ98J7iNJVfuYuFEFuLHaaCW7oIZAEnc0GLe6Lo46Rcikg==
@@ -3011,12 +3011,12 @@ cssnano-utils@^8.0.0, cssnano-utils@^8.0.1:
   dependencies:
     "@csstools/css-tokenizer" "^4.0.2"
 
-cssnano@9.0.5:
-  version "9.0.5"
-  resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-9.0.5.tgz#113f2c50be59e34ae06983e32101f56db0f554b6"
-  integrity sha512-D25KanNkgIIcJnFvbm1xinel2YWULKjOao+4pv1m2qCR6KPRxOWh4yRQboxhwVVtifwdVa3cVnSL651sAvHQoA==
+cssnano@9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-9.1.1.tgz#95f2efa4c3c9b919d469d0e5eaeb7cb6637f357f"
+  integrity sha512-Jm3JBThKaUOo6Q9Buyjez+ww/SsgbwmLgg8H5fIf+wAAv5clG2x1KupoQR2PejzEbRyTVqVu93nORWT/320J/g==
   dependencies:
-    cssnano-preset-default "^9.0.5"
+    cssnano-preset-default "^9.1.1"
 
 csso@^5.0.5:
   version "5.0.5"
@@ -3820,10 +3820,10 @@ eslint-visitor-keys@^5.0.1:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz#9e3c9489697824d2d4ce3a8ad12628f91e9f59be"
   integrity sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==
 
-eslint@10.10.0:
-  version "10.10.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-10.10.0.tgz#14b1d1849eedb2ee6805f3759050479ce2b23d71"
-  integrity sha512-NPXn6r5zl4uET1DAVPaOwzX3rut4c0wcmw3dWJAfOsTM5+TogXo0DDjz8pwm/hL8cyVNpHqeK4JpN0NjnyFFNw==
+eslint@10.11.0:
+  version "10.11.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-10.11.0.tgz#304d1591b7c6a327e3f64b4f550f99fda160ae20"
+  integrity sha512-P7a6UEEqb9G95MYAtqkmsTbVXIYyzIfl6NGOIJk162PaahFxFyeGcrlXYFSiagECg4sEm8IseJdZBKR3rx6MsQ==
   dependencies:
     "@eslint-community/eslint-utils" "^4.8.0"
     "@eslint-community/regexpp" "^4.12.2"
@@ -6535,14 +6535,7 @@ postcss-browser-comments@^6.0.1:
   resolved "https://registry.yarnpkg.com/postcss-browser-comments/-/postcss-browser-comments-6.0.2.tgz#6fb4f12d4aba7037282c91fce4bd026959cabb8e"
   integrity sha512-bZFLM8UZupVsuZDR4zFbzrPtKN6Xqpgj+C+vaxlL8r5E0cyhSO4OD3z+MjKstoQsIaKiQS+/Xci5jBUGyo9HlA==
 
-postcss-calc@11.1.2:
-  version "11.1.2"
-  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-11.1.2.tgz#3fd6c5a7bde761bec4f6a2ea6f892211f11cbc42"
-  integrity sha512-VYTKcDyI+zrgd9xogzUf96ei8RZqwPP06KxZiE96HMEOx/jNqcKXheCZbZcXiEMxZ1UzY7/dUFPyCHLu/fUBEA==
-  dependencies:
-    "@csstools/css-tokenizer" "^4.0.0"
-
-postcss-calc@^11.2.1:
+postcss-calc@11.2.1, postcss-calc@^11.2.1:
   version "11.2.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-11.2.1.tgz#851c627091d96e0d765318f97f34ec6599641639"
   integrity sha512-B5KZhrbeVyFznh7aj96O9oYvmipuobzWJVlPZ2NksjHdgSaqiVJ0UijuOuQTk/KVIzrKXp7399AiZGKtZF0jZA==
