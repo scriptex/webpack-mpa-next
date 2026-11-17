@@ -34,7 +34,7 @@ const browserSyncConfig = server => ({
 
 						exec(`php ${file} > ${name}.html`);
 					}
-			  }
+				}
 			: '**/*.php',
 		'**/*.html',
 		'./assets/dist/app.css',
@@ -119,7 +119,7 @@ module.exports = (env, argv) => {
 			require('postcss-each-variables'),
 			require('postcss-each'),
 			require('postcss-for'),
-			require('postcss-nested'),
+			require('postcss-nested').default,
 			require('postcss-extend'),
 			require('postcss-utilities'),
 			require('postcss-flexbugs-fixes'),
