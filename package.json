@@ -78,7 +78,7 @@
 		"postcss-utilities": "0.8.4",
 		"postcss-watch-folder": "2.0.0",
 		"stylelint": "17.16.0",
-		"stylelint-config-recommended": "18.0.0",
+		"stylelint-config-recommended": "19.0.0",
 		"stylelint-no-unsupported-browser-features": "8.1.2",
 		"svg-symbol-sprite": "1.5.2",
 		"webpack": "5.112.2",
